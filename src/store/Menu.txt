@@ -1,0 +1,161 @@
+
+Scanner sn = new Scanner(System.in);
+boolean done = false;
+int opcion;
+//storeInfo
+System.out.println(storeInRunAppo);
+while (!done) {
+			System.out.println();
+			System.out.println("--------MainMenu--------");
+			System.out.println();
+			System.out.println( "1.-Create Store");
+			System.out.println( "2.-menu Stock");
+			System.out.println( "3.-menu Orders (To process)");
+			System.out.println( "4.-menu Orders (Processed)");        
+			System.out.println( "5.-menu Customers");    
+			System.out.println( "6.-menu Providers");  
+			System.out.println( "7.-menu Employees");
+			System.out.println( "8.-Print Store InRunAppo");  
+			System.out.println( "9.-Testing");  
+			System.out.println( "0.-Exit application");
+			System.out.println("opcion>");
+			opcion = sn.nextInt();
+			
+			while (opcion<0 || opcion>9 ){
+				System.out.println();
+				System.out.println("--------MainMenu--------");
+				System.out.println();
+				System.out.println( "1.-Create Store");
+				System.out.println( "2.-menu Stock");
+				System.out.println( "3.-menu Orders (To process)");
+				System.out.println( "4.-menu Orders (Processed)");        
+				System.out.println( "5.-menu Customers");    
+				System.out.println( "6.-menu Providers");  
+				System.out.println( "7.-menu Employees");
+				System.out.println( "8.-Print Store Info");  
+				System.out.println( "9.-Testing");  
+				System.out.println( "0.-Exit application");
+				System.out.println("opcion>");
+				opcion = sn.nextInt();
+			}
+			
+            switch (opcion) {
+                case 1:
+					System.out.println("--------Create Store Menu--------");
+					//hay que hacerlo
+                break;
+				
+                case 2:
+                    RunApp.menu("Stock");
+				break;
+				
+                case 3:
+                    RunApp.menu("Orders to Process");
+                break;
+				
+                case 4:
+                    RunApp.menu("Orders processed");
+                break;
+				
+                case 5:
+					RunApp.menu("Customers");
+				break;
+				
+                case 6 :
+                    RunApp.menu("Providers");
+                break;
+				
+                case 7:
+                    RunApp.menu("Employees");
+                break;
+				
+                case 8:
+                    System.out.println("--------Store Info Menu--------");
+                    System.out.println(storeInfo);
+                break;
+				
+                case 9:
+					System.out.println("--------Testing Menu--------");
+                    System.out.println("El programara procedera a hacer testing");
+                break;
+				
+                case 0:
+                    done = true;
+                break;
+            }
+				
+				
+		}
+		
+		
+		//Menu:
+	Scanner sn = new Scanner(System.in);
+	boolean done2 = false;
+	int opcion2;
+		public void menu(String instruction){
+		while(!done2){
+			System.out.println();
+			System.out.println("--------Manage " +instruction+ " Menu--------");
+			System.out.println();
+			System.out.println( "1.-Insert "+instruction);
+			System.out.println( "2.-Remove "+instruction);
+			System.out.println( "3.-Modify "+instruction);
+			System.out.println( "4.-Search "+instruction);
+			System.out.println( "5.-Print "+instruction);
+			System.out.println( "0.-Exit application");    
+			System.out.println("opcion>");  
+			opcion2 = sn.nextInt();
+		
+			while(opcion2<0 || opcion2>4){
+				System.out.println();
+				System.out.println("--------Manage " +instruction+ " Menu--------");
+				System.out.println();
+				System.out.println( "1.-Insert "+instruction);
+				System.out.println( "2.-Remove "+instruction);
+				System.out.println( "3.-Modify "+instruction);
+				System.out.println( "4.-Search "+instruction);
+				System.out.println( "5.-Print "+instruction);				
+				System.out.println( "0.-Exit application");    
+				System.out.println("opcion>");  
+				opcion2 = sn.nextInt();
+			}
+		
+		
+			switch (opcion2) {
+				case 1:
+					System.out.println("--------Manage " +instruction+ " Menu--------");
+					System.out.println();
+					sm.insert(instruction);
+					
+				break;
+				
+				case 2:
+					System.out.println("--------Manage " +instruction+ " Menu--------");
+					System.out.println();
+					sm.remove(instruction);
+				break;
+				
+				case 3:
+					System.out.println("--------Manage " +instruction+ " Menu--------");
+					System.out.println();
+					sm.modify(instruction);
+				break;
+				
+				case 4:
+					System.out.println("--------Manage " +instruction+ " Menu--------");
+					System.out.println();
+					sm.search(instruction);
+				break;
+				
+				case 5:
+					System.out.println("--------Manage " +instruction+ " Menu--------");
+					System.out.println();
+					System.out.println("Printing " + instruction);
+				break;
+				
+				case 0:
+					done2 = true;
+				break;
+			}
+		}
+	}
